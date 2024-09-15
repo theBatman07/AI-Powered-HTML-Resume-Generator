@@ -29,7 +29,7 @@ label {
     font-weight: 500;
 }
 
-input[type="text"],
+input[type="password"],
 input[type="file"] {
     padding: 10px;
     border: 1px solid #ddd;

@@ -63,7 +63,7 @@ app.post('/extract-pdf', upload.single('pdfFile'), async (req, res) => {
             responseMimeType: 'text/plain',
           };
 
-            const message = `You are a helpful assistant that provides beautiful and modern HTML+CSS code and nothing else (NO EXPLAINATION). \nGenerate a HTML resume with the following details:\n${extractedText}`;
+            const message = `You are a helpful assistant that generates HTML resumes from LinkedIn PDF content. \n You Do not provide any explaination or any thing extra just the HTML code.\n\nGenerate a HTML resume with the following details:\n${extractedText}`;
 
             const chatSession = model.startChat({
                 generationConfig,
