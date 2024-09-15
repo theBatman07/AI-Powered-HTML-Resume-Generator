@@ -30,7 +30,7 @@ extractBtn.addEventListener('click', async () => {
     formData.append('pdfFile', pdfFile);
 
     try {
-        const response = await fetch('https://ai-powered-html-resume-generator.vercel.app/extract-pdf', {
+        const response = await fetch('/extract-pdf', {
             method: 'POST',
             body: formData
         });
