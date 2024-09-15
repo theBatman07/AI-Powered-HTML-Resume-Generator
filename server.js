@@ -17,7 +17,7 @@ const port = 3000;
 app.use(cors());
 
 
-app.post('https://ai-powered-html-resume-generator.vercel.app/extract-pdf', upload.single('pdfFile'), async (req, res) => {
+app.post('ai-powered-html-resume-generator-7ddtnl19d-gcords-projects.vercel.app/extract-pdf', upload.single('pdfFile'), async (req, res) => {
     const apiselect = req.body.apiselect;
     let apiKey = req.body.apiKey;
     
