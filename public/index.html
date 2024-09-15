@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Resume Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>HTML Resume Generator</h1>
+    
+    <div class="input-container">
+        <label for="api_select">Select the LLM Provider:</label>
+        <select id="api_select" onchange="getSelectedValue()">
+            <option value="google_gemini">Google Gemini API</option>
+            <option value="open_ai">OpenAI API</option>
+        </select>
+        <label for="apiKey">API Key:</label>
+        <input type="text" id="apiKey" placeholder="Enter your API Key" required>
+    </div>
+
+    <div class="input-container">
+        <label for="pdfFile">Choose a PDF file:</label>
+        <input type="file" id="pdfFile" accept="application/pdf">
+    </div>
+
+    <div class="button-container">
+        <button id="extractBtn">Extract PDF Data</button>
+    </div>
+
+    <div class="button-container">
+        <button id="downloadBtn">Download HTML Resume</button>
+    </div>
+
+    <div id="pdfContent">
+        <p>No Resume Generated Yet!</p>
+    </div>
+
+    <script src="pdf_extractor.js"></script>
+</body>
+</html>
